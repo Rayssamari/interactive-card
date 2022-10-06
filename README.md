@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Rayssamari/interactive-card/tree/main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Solution](https://github.com/Rayssamari/interactive-card/tree/main)
+- Live Site URL: [Preview Site](https://rayssamari.github.io/interactive-card/)
 
 ## My process
 
