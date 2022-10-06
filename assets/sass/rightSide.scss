@@ -1,0 +1,112 @@
+.container{
+    .right-side{
+        @include flex(column, center, center);
+        .form-area{
+            form{
+                width: 60rem;
+                margin-left: 25rem;
+                padding-left: 5rem;
+                text-transform: uppercase;
+                font-size: 1.3rem;
+                line-height: 2.5rem;
+                font-weight: 600;
+                letter-spacing: 0.2rem;
+                color: $violet;
+
+                input {
+                    padding-left: 1rem;
+                    color: $violet;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                }
+                input:focus{
+                    outline-color: $border-active;
+                }
+                input::placeholder{
+                    color: $gray-light;
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                }
+                input[type=text]{
+                    margin-top: 0.4rem;
+                    border: 1px solid $gray-light;
+                    border-radius: 0.8rem;
+                }
+                input[type=text],
+                input[id=cardNumber]{
+                    width: 38rem;
+                    height: 4rem; 
+                }
+                input[name=cardExpData]{
+                    width: 8rem;
+                    height: 4rem; 
+                    margin-right: 0.8rem;
+                }
+                input[id=cardCvc]{
+                    width: 18rem;
+                    height: 4rem; 
+                }
+                .card-date-cvc{
+                    @include flex(row,flex-start, flex-start);
+                    gap:2rem;
+                }
+                .erro{
+                    display: none;
+                    color: $error;
+                    font-size: 1rem;
+                }
+                .visible{
+                    display: block;
+                }
+                input.error{
+                    border-color: $error !important;
+                }
+            }
+
+            form > div {
+                margin-bottom: 2.8rem;
+            }
+        }
+        .button{
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.6rem;
+                width: 38rem;
+                height: 5rem;
+                border: none;
+                border-radius: 1rem;
+                background-color: $violet;
+                color: $white;
+                text-decoration: none;
+            }
+        }
+        .sucess-sent{
+            @include flex(column, center, flex-start);
+            height: 500px;
+
+            img{
+                width: 7rem;
+                height: 7rem;
+                margin-bottom: 3rem;
+            }
+            p.title{
+                color: $violet;
+                font-size: 2.2rem;
+                letter-spacing: 0.2rem;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+            }
+            p.subtitle{
+                color: $gray-dark;
+                font-size: 1.3rem;
+                font-weight: 500;
+                margin-bottom: 3.5rem;
+            }
+        }
+        .display{
+            display: none !important;
+        }
+    }
+}

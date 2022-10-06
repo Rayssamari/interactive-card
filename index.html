@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <img src="./images/bg-main-desktop.png" alt="BG left side" />
+            <div class="card-front">
+                <div class="circle-big"></div>
+                <div class="circle-small"></div>
+                <div class="number-card-front">
+                    9591 6489 6389 1010
+                </div>
+                <div class="name-card-front">
+                    FELICIA LEIRE
+                </div>
+                <div class="date-card-front">
+                    <span class="month">09</span>/<span class="year">00</span>
+                </div>
+                <img src="./images/bg-card-front.png" alt="Card Front" />
+            </div>
+            <div class="card-back">
+                <div class="code-card-back">
+                    000
+                </div>
+                <img src="./images/bg-card-back.png" alt="card back" />
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="form-area">
+                <form action="" method="">
+                    <div class="cardholder-name">
+                        <p>Cardholder name</p>
+                        <input type="text" maxlength="30" name="cardName" id="cardName" placeholder="e.g Jane Appleseed" required />
+                        <span class="erro" aria-hidden="true">Can't be blank</span>
+                    </div>
+                    <div class="card-number">
+                        <p>Card number</p>
+                        <input type="text" maxlength="16" name="cardNumber" id="cardNumber" placeholder="e.g 1234 5678 9123 0000" required />
+                        <span class="erro" aria-hidden="true">Wrong format, numbers only</span>
+                    </div>
+                    <div class="card-date-cvc">
+                        <div class="card-expDate">
+                            <p>EXP. Date (MM/YY)</p>
+                            <input type="text" maxlength="2" name="cardExpData" id="cardExpDataMonth" placeholder="MM" required />
+                            <span class="erro" aria-hidden="true">Can't be blank</span>
+                            <input type="text" maxlength="2" name="cardExpData" id="cardExpDataYear" placeholder="YY"  required />
+                            <span class="erro" aria-hidden="true">Can't be blank</span>
+                        </div>
+                        <div class="card-cvc">
+                            <p>CVC</p>
+                            <input maxlength="4" type="text" name="cardCvc"  id="cardCvc" placeholder="e.g 123" required />
+                            <span class="erro" aria-hidden="true">Can't be blank</span>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="" class="sentButton">Confirm</a>
+                    </div>
+                </form>
+            </div>
+            <div class="sucess-sent display">
+                <img src="./images/icon-complete.svg" alt="" />
+                <p class="title">THANK YOU!</p>
+                <p class="subtitle">We've added  your card details</p>
+                <div class="button">
+                    <a href="" class="continueButton">Continue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./assets/js/index.js" type="module"></script>
+</body>
+</html>

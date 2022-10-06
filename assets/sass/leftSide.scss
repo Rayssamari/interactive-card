@@ -1,0 +1,60 @@
+.container{
+    .left-side{
+        img {
+            width: 45rem;
+            height: 100%;
+        }
+        position: relative;
+
+        .card-front {
+            position: absolute;
+            top: 14rem;
+            left: 15rem;
+            img{
+                width: 40rem;
+                height: 22rem;
+            }
+            .circle-big{
+                position: absolute;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                background-color: $white;
+                top: 2.5rem;
+                left: 3rem;
+            }
+            .circle-small{
+                position: absolute;
+                width: 2rem;
+                height: 2rem;
+                background-color: transparent;
+                border: 1px solid $white ;
+                border-radius: 50%;
+                top: 4rem;
+                left: 10rem;
+            }
+            .number-card-front{
+                @include infoCard(12rem, 3rem, 2.8rem);
+            }
+            .name-card-front{
+                @include infoCard(18rem, 3rem, 1.4rem);
+            }
+            .date-card-front{
+                @include infoCard(18rem, 32rem, 1.4rem);
+            }
+        }
+
+        .card-back {
+            position: absolute;
+            left: 24rem;
+            top: 39rem;
+            .code-card-back{
+                @include infoCard(9.8rem, 32rem, 1.4rem);
+            }
+            img{
+                width: 40rem;
+                height: 22rem;
+            }
+        }
+    }
+}

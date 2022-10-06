@@ -1,0 +1,17 @@
+
+@mixin flex($direction, $align, $justify){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin  infoCard($top, $left, $font-size) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    font-size: $font-size;
+    color:$white;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+}

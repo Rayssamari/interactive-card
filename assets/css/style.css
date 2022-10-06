@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 45rem 1fr;
+  overflow-y: hidden;
+}
+
+.container .left-side {
+  position: relative;
+}
+.container .left-side img {
+  width: 45rem;
+  height: 100%;
+}
+.container .left-side .card-front {
+  position: absolute;
+  top: 14rem;
+  left: 15rem;
+}
+.container .left-side .card-front img {
+  width: 40rem;
+  height: 22rem;
+}
+.container .left-side .card-front .circle-big {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 2.5rem;
+  left: 3rem;
+}
+.container .left-side .card-front .circle-small {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  top: 4rem;
+  left: 10rem;
+}
+.container .left-side .card-front .number-card-front {
+  position: absolute;
+  top: 12rem;
+  left: 3rem;
+  font-size: 2.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+.container .left-side .card-front .name-card-front {
+  position: absolute;
+  top: 18rem;
+  left: 3rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+.container .left-side .card-front .date-card-front {
+  position: absolute;
+  top: 18rem;
+  left: 32rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+.container .left-side .card-back {
+  position: absolute;
+  left: 24rem;
+  top: 39rem;
+}
+.container .left-side .card-back .code-card-back {
+  position: absolute;
+  top: 9.8rem;
+  left: 32rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+.container .left-side .card-back img {
+  width: 40rem;
+  height: 22rem;
+}
+
+.container .right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .right-side .form-area form {
+  width: 60rem;
+  margin-left: 25rem;
+  padding-left: 5rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: #21092f;
+}
+.container .right-side .form-area form input {
+  padding-left: 1rem;
+  color: #21092f;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.container .right-side .form-area form input:focus {
+  outline-color: hsla(278deg, 93%, 30%, 0.678);
+}
+.container .right-side .form-area form input::placeholder {
+  color: #dedddf;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.container .right-side .form-area form input[type=text] {
+  margin-top: 0.4rem;
+  border: 1px solid #dedddf;
+  border-radius: 0.8rem;
+}
+.container .right-side .form-area form input[type=text],
+.container .right-side .form-area form input[id=cardNumber] {
+  width: 38rem;
+  height: 4rem;
+}
+.container .right-side .form-area form input[name=cardExpData] {
+  width: 8rem;
+  height: 4rem;
+  margin-right: 0.8rem;
+}
+.container .right-side .form-area form input[id=cardCvc] {
+  width: 18rem;
+  height: 4rem;
+}
+.container .right-side .form-area form .card-date-cvc {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.container .right-side .form-area form .erro {
+  display: none;
+  color: #ff5252;
+  font-size: 1rem;
+}
+.container .right-side .form-area form .visible {
+  display: block;
+}
+.container .right-side .form-area form input.error {
+  border-color: #ff5252 !important;
+}
+.container .right-side .form-area form > div {
+  margin-bottom: 2.8rem;
+}
+.container .right-side .button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  width: 38rem;
+  height: 5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #21092f;
+  color: #ffffff;
+  text-decoration: none;
+}
+.container .right-side .sucess-sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 500px;
+}
+.container .right-side .sucess-sent img {
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 3rem;
+}
+.container .right-side .sucess-sent p.title {
+  color: #21092f;
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.container .right-side .sucess-sent p.subtitle {
+  color: rgb(142, 133, 147);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 3.5rem;
+}
+.container .right-side .display {
+  display: none !important;
+}
+
+@media (min-width: 827px) and (max-width: 1145px) {
+  .container .left-side img {
+    width: 32rem;
+    height: 100%;
+  }
+  .container .left-side .card-front {
+    left: 10rem;
+  }
+  .container .left-side .card-front img {
+    width: 32rem;
+    height: 20rem;
+  }
+  .container .left-side .card-front .circle-big {
+    width: 4rem;
+    height: 4rem;
+  }
+  .container .left-side .card-front .circle-small {
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 8rem;
+  }
+  .container .left-side .card-front .number-card-front {
+    position: absolute;
+    top: 10rem;
+    left: 3rem;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-front .name-card-front {
+    position: absolute;
+    top: 16rem;
+    left: 3rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-front .date-card-front {
+    position: absolute;
+    top: 16rem;
+    left: 22rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-back {
+    left: 18rem;
+  }
+  .container .left-side .card-back img {
+    width: 32rem;
+    height: 20rem;
+  }
+  .container .left-side .card-back .code-card-back {
+    position: absolute;
+    top: 9rem;
+    left: 24rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .right-side .form-area form {
+    width: 40rem;
+    margin-left: 2rem;
+  }
+  .container .right-side .form-area form input[type=text],
+.container .right-side .form-area form input[id=cardNumber] {
+    width: 30rem;
+    height: 4rem;
+  }
+  .container .right-side .form-area form input[name=cardExpData] {
+    width: 8rem;
+    height: 4rem;
+    margin-right: 0.8rem;
+  }
+  .container .right-side .form-area form input[id=cardCvc] {
+    width: 10rem;
+    height: 4rem;
+  }
+  .container .right-side .form-area .button a {
+    width: 30rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 826px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .container .left-side img {
+    width: 100%;
+    height: 26rem;
+  }
+  .container .left-side .card-front {
+    top: 13rem;
+    left: 15rem;
+    z-index: 99;
+  }
+  .container .left-side .card-front img {
+    width: 30rem;
+    height: 18rem;
+  }
+  .container .left-side .card-front .circle-big {
+    width: 4rem;
+    height: 4rem;
+  }
+  .container .left-side .card-front .circle-small {
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 8rem;
+  }
+  .container .left-side .card-front .number-card-front {
+    position: absolute;
+    top: 9rem;
+    left: 3rem;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-front .name-card-front {
+    position: absolute;
+    top: 14rem;
+    left: 3rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-front .date-card-front {
+    position: absolute;
+    top: 14rem;
+    left: 22rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-back {
+    top: 2rem;
+    left: 30rem;
+  }
+  .container .left-side .card-back img {
+    width: 30rem;
+    height: 18rem;
+  }
+  .container .left-side .card-back .code-card-back {
+    position: absolute;
+    top: 8rem;
+    left: 24rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .container .right-side .form-area form {
+    width: 40rem;
+    margin-left: 2rem;
+  }
+  .container .right-side .form-area form input[type=text],
+.container .right-side .form-area form input[id=cardNumber] {
+    width: 30rem;
+    height: 4rem;
+  }
+  .container .right-side .form-area form input[name=cardExpData] {
+    width: 8rem;
+    height: 4rem;
+    margin-right: 0.8rem;
+  }
+  .container .right-side .form-area form input[id=cardCvc] {
+    width: 10rem;
+    height: 4rem;
+  }
+  .container .right-side .form-area .button a {
+    width: 30rem;
+  }
+}
+@media (min-width: 385px) and (max-width: 599px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30rem 1fr;
+  }
+  .container .left-side img {
+    width: 100%;
+    height: 22rem;
+  }
+  .container .left-side .card-front {
+    top: 11.1rem;
+    left: 4rem;
+    z-index: 99;
+  }
+  .container .left-side .card-front img {
+    width: 28rem;
+    height: 16rem;
+  }
+  .container .left-side .card-front .circle-big {
+    top: 1.4rem;
+    left: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  .container .left-side .card-front .circle-small {
+    top: 2.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 6rem;
+  }
+  .container .left-side .card-front .number-card-front {
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-front .name-card-front {
+    position: absolute;
+    top: 12rem;
+    left: 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-front .date-card-front {
+    position: absolute;
+    top: 12rem;
+    left: 18rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-back {
+    top: 2rem;
+    left: 10rem;
+  }
+  .container .left-side .card-back img {
+    width: 28rem;
+    height: 16rem;
+  }
+  .container .left-side .card-back .code-card-back {
+    position: absolute;
+    top: 7rem;
+    left: 22rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .container .right-side .form-area form {
+    width: 40rem;
+    margin-left: 2rem;
+  }
+  .container .right-side .form-area form input[type=text],
+.container .right-side .form-area form input[id=cardNumber] {
+    width: 30rem;
+    height: 4rem;
+  }
+  .container .right-side .form-area form input[name=cardExpData] {
+    width: 8rem;
+    height: 4rem;
+    margin-right: 0.8rem;
+  }
+  .container .right-side .form-area form input[id=cardCvc] {
+    width: 10rem;
+    height: 4rem;
+  }
+  .container .right-side .form-area .button a {
+    width: 30rem;
+  }
+}
+@media (max-width: 384px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30rem 1fr;
+    overflow-x: hidden;
+  }
+  .container .left-side img {
+    width: 100%;
+    height: 20rem;
+  }
+  .container .left-side .card-front {
+    top: 9.9rem;
+    left: 2rem;
+    z-index: 99;
+  }
+  .container .left-side .card-front img {
+    width: 23rem;
+    height: 14rem;
+  }
+  .container .left-side .card-front .circle-big {
+    top: 1.4rem;
+    left: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  .container .left-side .card-front .circle-small {
+    top: 2.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 6rem;
+  }
+  .container .left-side .card-front .number-card-front {
+    position: absolute;
+    top: 6.5rem;
+    left: 2rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-front .name-card-front {
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-front .date-card-front {
+    position: absolute;
+    top: 10rem;
+    left: 18rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .left-side .card-back {
+    top: 2rem;
+    left: 6rem;
+  }
+  .container .left-side .card-back img {
+    width: 23rem;
+    height: 14rem;
+  }
+  .container .left-side .card-back .code-card-back {
+    position: absolute;
+    top: 6rem;
+    left: 18rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+  }
+  .container .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .container .right-side .form-area {
+    max-width: 100%;
+  }
+  .container .right-side .form-area form {
+    margin: auto;
+  }
+  .container .right-side .form-area form input[type=text],
+.container .right-side .form-area form input[id=cardNumber] {
+    width: 25rem;
+    height: 4rem;
+  }
+  .container .right-side .form-area form input[name=cardExpData] {
+    width: 6rem;
+    height: 4rem;
+    margin-right: 0.8rem;
+  }
+  .container .right-side .form-area form input[id=cardCvc] {
+    width: 8rem;
+    height: 4rem;
+  }
+  .container .right-side .form-area .button a {
+    width: 25rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*# sourceMappingURL=style.css.map */
